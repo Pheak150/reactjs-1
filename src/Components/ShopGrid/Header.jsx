@@ -74,22 +74,22 @@ const Header = () => {
                     <a href="./index.html">Home</a>
                   </li>
                   <li class="active">
-                    <a href="./shop-grid.html">Shop</a>
+                    <Link to="/shopgrid">Shop</Link>
                   </li>
                   <li>
                     <a href="#">Pages</a>
                     <ul class="header__menu__dropdown">
                       <li>
-                        <a href="./shop-details.html">Shop Details</a>
+                        <Link to="/shopdetail">Shop Details</Link>
                       </li>
                       <li>
-                        <a href="./shoping-cart.html">Shoping Cart</a>
+                        <Link to="/shoppingcart">Shoping Cart</Link>
                       </li>
                       <li>
-                        <a href="./checkout.html">Check Out</a>
+                        <Link to="/checkout">Check Out</Link>
                       </li>
                       <li>
-                        <a href="./blog-details.html">Blog Details</a>
+                        <Link to="/blogdetails">Blog Details</Link>
                       </li>
                     </ul>
                   </li>

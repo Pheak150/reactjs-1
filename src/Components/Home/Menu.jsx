@@ -1,9 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Menu = () => {
   return (
     <div>
-      {" "}
       {/* <!-- Humberger Begin -->*/}
       <div class="humberger__menu__overlay"></div>
       <div class="humberger__menu__wrapper">
@@ -36,10 +36,10 @@ const Menu = () => {
             <span class="arrow_carrot-down"></span>
             <ul>
               <li>
-                <a href="#">Spanis</a>
+                <a href="#">English</a>
               </li>
               <li>
-                <a href="#">English</a>
+                <a href="#">Khmer</a>
               </li>
             </ul>
           </div>
@@ -52,33 +52,33 @@ const Menu = () => {
         <nav class="humberger__menu__nav mobile-menu">
           <ul>
             <li class="active">
-              <a href="./index.html">Home</a>
+              <Link to="/home">Home</Link>
             </li>
             <li>
-              <a href="./shop-grid.html">Shop</a>
+              <Link to="/shopgrid">Shop</Link>
             </li>
             <li>
               <a href="#">Pages</a>
               <ul class="header__menu__dropdown">
                 <li>
-                  <a href="./shop-details.html">Shop Details</a>
+                  <Link to="/shopdetail">Shop Details</Link>
                 </li>
                 <li>
-                  <a href="./shoping-cart.html">Shoping Cart</a>
+                  <Link to="/shopcart">Shoping Cart</Link>
                 </li>
                 <li>
-                  <a href="./checkout.html">Check Out</a>
+                  <Link to="/checkout">Check Out</Link>
                 </li>
                 <li>
-                  <a href="./blog-details.html">Blog Details</a>
+                  <Link to="/blogdetails">Blog Details</Link>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="./blog.html">Blog</a>
+              <Link to="/blog">Blog</Link>
             </li>
             <li>
-              <a href="./contact.html">Contact</a>
+              <Link href="/contact">Contact</Link>
             </li>
           </ul>
         </nav>

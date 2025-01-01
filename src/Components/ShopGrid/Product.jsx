@@ -23,9 +23,16 @@ import product11 from "../img/product/product-11.jpg";
 import product12 from "../img/product/product-12.jpg";
 
 const Product = () => {
+  useEffect(() => {
+      document.querySelectorAll(".set-bg").forEach((element) => {
+        const bg = element.getAttribute("data-setbg");
+        element.style.backgroundImage = `url(${bg})`; // Corrected string interpolation
+      });
+    }, []);
   return (
     <div>
       {" "}
+      
       {/*<!-- Product Section Begin -->*/}
       <section class="product spad">
         <div class="container" />

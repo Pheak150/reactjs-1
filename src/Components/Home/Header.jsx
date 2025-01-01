@@ -83,17 +83,17 @@ const Header = () => {
                     <a href="#">Pages</a>
                     <ul className="header__menu__dropdown">
                       <li>
-                        <Link to="/shop-details">Shop Details</Link>
+                        <Link to="/shopdetail">Shop Details</Link>
                       </li>
                       <li>
-                        <Link to="/shopping-cart">Shopping Cart</Link>{" "}
+                        <Link to="/shoppingcart">Shopping Cart</Link>{" "}
                         {/* Updated link */}
                       </li>
                       <li>
                         <Link to="/checkout">Check Out</Link>
                       </li>
                       <li>
-                        <Link to="/blog-details">Blog Details</Link>
+                        <Link to="/blogdetail">Blog Details</Link>
                       </li>
                     </ul>
                   </li>
