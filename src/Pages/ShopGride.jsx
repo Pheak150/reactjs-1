@@ -14,7 +14,7 @@ const ShopGride = () => {
       <Menu />
       <Header />
       <Hero />
-      <Section />
+      {/*<Section />*/}
       <Product />
       <Footer />
     </div>

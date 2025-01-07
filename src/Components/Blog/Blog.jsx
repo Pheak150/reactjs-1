@@ -54,8 +54,8 @@ const Section = () => {
                       </div>
                       <div class="blog__sidebar__recent__item__text">
                         <h6>
-                          09 Kinds Of Vegetables
-                          <br /> Protect The Liver
+                          09 Kinds Of fashion
+                          <br />  The Liver
                         </h6>
                         <span>MAR 05, 2019</span>
                       </div>
@@ -66,8 +66,8 @@ const Section = () => {
                       </div>
                       <div class="blog__sidebar__recent__item__text">
                         <h6>
-                          Tips You To Balance
-                          <br /> Nutrition Meal Day
+                          Tips You To be fashion
+                          <br /> fashion every Day
                         </h6>
                         <span>MAR 05, 2019</span>
                       </div>
@@ -78,8 +78,8 @@ const Section = () => {
                       </div>
                       <div class="blog__sidebar__recent__item__text">
                         <h6>
-                          4 Principles Help You Lose <br />
-                          Weight With Vegetables
+                          4 Principles Help You look<br />
+                           good With your fashion
                         </h6>
                         <span>MAR 05, 2019</span>
                       </div>
@@ -89,11 +89,11 @@ const Section = () => {
                 <div class="blog__sidebar__item">
                   <h4>Search By</h4>
                   <div class="blog__sidebar__item__tags">
-                    <a href="#">Apple</a>
-                    <a href="#">Beauty</a>
-                    <a href="#">Vegetables</a>
-                    <a href="#">Fruit</a>
-                    <a href="#">Healthy Food</a>
+                    <a href="#">shirt</a>
+                    <a href="#">jecket</a>
+                    <a href="#">Shose</a>
+                    <a href="#">jelwery</a>
+                    <a href="#">nessecery</a>
                     <a href="#">Lifestyle</a>
                   </div>
                 </div>
@@ -116,7 +116,7 @@ const Section = () => {
                         </li>
                       </ul>
                       <h5>
-                        <a href="#">6 ways to prepare breakfast for 30</a>
+                        <a href="#">6 ways to prepare your fashrion</a>
                       </h5>
                       <p>
                         Sed quia non numquam modi tempora indunt ut labore et
@@ -143,7 +143,7 @@ const Section = () => {
                         </li>
                       </ul>
                       <h5>
-                        <a href="#">Visit the clean farm in the US</a>
+                        <a href="#">Visit the fashion in the US</a>
                       </h5>
                       <p>
                         Sed quia non numquam modi tempora indunt ut labore et
@@ -170,7 +170,7 @@ const Section = () => {
                         </li>
                       </ul>
                       <h5>
-                        <a href="#">Cooking tips make cooking simple</a>
+                        <a href="#">tips make you look cool</a>
                       </h5>
                       <p>
                         Sed quia non numquam modi tempora indunt ut labore et
@@ -197,7 +197,7 @@ const Section = () => {
                         </li>
                       </ul>
                       <h5>
-                        <a href="#">Cooking tips make cooking simple</a>
+                        <a href="#"> tips make fashion simple</a>
                       </h5>
                       <p>
                         Sed quia non numquam modi tempora indunt ut labore et
@@ -225,7 +225,7 @@ const Section = () => {
                       </ul>
                       <h5>
                         <a href="#">
-                          The Moment You Need To Remove Garlic From The Menu
+                          The Moment You Need before wearing
                         </a>
                       </h5>
                       <p>
@@ -253,7 +253,7 @@ const Section = () => {
                         </li>
                       </ul>
                       <h5>
-                        <a href="#">Cooking tips make cooking simple</a>
+                        <a href="#"> tips make fashion simple</a>
                       </h5>
                       <p>
                         Sed quia non numquam modi tempora indunt ut labore et

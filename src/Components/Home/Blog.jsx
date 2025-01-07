@@ -31,7 +31,7 @@ const Blog = () => {
                   </li>
                 </ul>
                 <h5>
-                  <a href="#">Cooking tips make cooking simple</a>
+                  <a href="#">Fashion tips make you looking simple</a>
                 </h5>
                 <p>
                   Sed quia non numquam modi tempora indunt ut labore et dolore
@@ -55,7 +55,7 @@ const Blog = () => {
                   </li>
                 </ul>
                 <h5>
-                  <a href="#">6 ways to prepare breakfast for 30</a>
+                  <a href="#">6 ways to prepare your fashion for 30</a>
                 </h5>
                 <p>
                   Sed quia non numquam modi tempora indunt ut labore et dolore
@@ -79,7 +79,7 @@ const Blog = () => {
                   </li>
                 </ul>
                 <h5>
-                  <a href="#">Visit the clean farm in the US</a>
+                  <a href="#">Visit the in the US</a>
                 </h5>
                 <p>
                   Sed quia non numquam modi tempora indunt ut labore et dolore

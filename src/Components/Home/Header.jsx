@@ -1,10 +1,32 @@
 import React from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import image from "../img/logo.png";
 import lang from "../img/language.png";
-
-import { Link } from "react-router-dom"; // Corrected import
+import { useCart } from "../CartContext";
+import { Link } from "react-router-dom";
 
 const Header = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const { cart } = useCart();
+  const totalProductCount = cart.reduce(
+    (total, product) => total + product.quantity,
+    0
+  );
+  const subtotal = cart.reduce(
+    (total, product) => total + product.price * product.quantity,
+    0
+  );
+
+  const handleLanguageSwitch = (language) => {
+    const pathWithoutLanguage = location.pathname.split("/").slice(2).join("/");
+    navigate(`/${language}/${pathWithoutLanguage}`);
+  };
+
+  const isKhmer = location.pathname.startsWith("/kh");
+  const currentLanguage = location.pathname.split("/")[1] || "en";
+  const currentPath = location.pathname;
+
   return (
     <div>
       {/* Header Section Begin */}
@@ -16,7 +38,10 @@ const Header = () => {
                 <div className="header__top__left">
                   <ul>
                     <li>
-                      <i className="fa fa-envelope"></i> hello@colorlib.com
+                      <i className="fa fa-envelope"></i>{" "}
+                      {isKhmer
+                        ? "សូមស្វាគមន៍ការមកកាន់គេហទំព័រយើងខ្ញុំ"
+                        : "Welcome to my website"}
                     </li>
                     <li>Free Shipping for all Orders over $99</li>
                   </ul>
@@ -39,15 +64,15 @@ const Header = () => {
                     </a>
                   </div>
                   <div className="header__top__right__language">
-                    <img src={lang} alt="Language options" />
+                    {/* <img src={lang} alt="Language options" /> */}
                     <div>English</div>
                     <span className="arrow_carrot-down"></span>
                     <ul>
                       <li>
-                        <a href="#">Khmer</a>
+                        <a style={{ color: "white" }}>Khmer</a>
                       </li>
                       <li>
-                        <a href="#">English</a>
+                        <a style={{ color: "white" }}>English</a>
                       </li>
                     </ul>
                   </div>
@@ -73,35 +98,60 @@ const Header = () => {
             <div className="col-lg-6">
               <nav className="header__menu">
                 <ul>
-                  <li className="active">
-                    <Link to="/home">Home</Link>
+                  <li
+                    className={`${
+                      currentPath.includes("home") ? "active" : ""
+                    }`}
+                  >
+                    <Link to='/home'>
+                      Home
+                    </Link>
                   </li>
-                  <li>
-                    <Link to="/shopgrid">Shop</Link>
+                  <li
+                    className={`${
+                      currentPath.includes("shopgrid") ? "active" : ""
+                    }`}
+                  >
+                    <Link to='/shopgrid'>
+                      Shop
+                    </Link>
                   </li>
-                  <li>
-                    <a href="#">Pages</a>
+                  <li
+                    className={`${
+                      currentPath.includes("shoppingcart") ||
+                      currentPath.includes("blogdetail")
+                        ? "active"
+                        : ""
+                    }`}
+                  >
+                    <a>{isKhmer ? "ទំព័រ" : "Page"}</a>
                     <ul className="header__menu__dropdown">
-                      <li>
+                      {/* <li>
                         <Link to="/shopdetail">Shop Details</Link>
-                      </li>
+                      </li> */}
                       <li>
-                        <Link to="/shoppingcart">Shopping Cart</Link>{" "}
+                        <Link to='/shoppingcart'>
+                          Shopping Cart
+                        </Link>
                         {/* Updated link */}
                       </li>
-                      <li>
+                      {/* <li>
                         <Link to="/checkout">Check Out</Link>
-                      </li>
+                      </li> */}
                       <li>
-                        <Link to="/blogdetail">Blog Details</Link>
+                        <Link to='/blogdetail'>
+                          Blog Detail
+                        </Link>
                       </li>
                     </ul>
                   </li>
                   <li>
-                    <Link to="/blog">Blog</Link>
+                    <Link to='/blog'>Blog</Link>
                   </li>
                   <li>
-                    <Link to="/contact">Contact</Link>
+                    <Link to='/contact'>
+                      Contact
+                    </Link>
                   </li>
                 </ul>
               </nav>
@@ -115,13 +165,14 @@ const Header = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link to="/cart">
-                      <i className="fa fa-shopping-bag"></i> <span>3</span>
+                    <Link to="/shoppingcart">
+                      <i className="fa fa-shopping-bag"></i>{" "}
+                      <span>{totalProductCount}</span>
                     </Link>
                   </li>
                 </ul>
                 <div className="header__cart__price">
-                  item: <span>$150.00</span>
+                  item: <span>${subtotal.toFixed(2)}</span>
                 </div>
               </div>
             </div>

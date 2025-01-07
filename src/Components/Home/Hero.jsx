@@ -1,12 +1,26 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import banner from "../img/hero/banner.jpg";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
+  const [products, setProducts] = useState([]);
   useEffect(() => {
     document.querySelectorAll(".set-bg").forEach((element) => {
       const bg = element.getAttribute("data-setbg");
-      element.style.backgroundImage = `url(${bg})`; // Corrected string interpolation
+      element.style.backgroundImage = `url(${bg})`;
     });
+  }, []);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch("https://fakestoreapi.com/products/categories");
+        const data = await response.json();
+        setProducts(data);
+      } catch (error) { console.error("Error fetching products:", error); }
+    };
+
+    fetchProducts();
   }, []);
 
   return (
@@ -22,39 +36,11 @@ const Hero = () => {
                   <span>All departments</span>
                 </div>
                 <ul>
-                  <li>
-                    <a href="#">Fresh Meat</a>
-                  </li>
-                  <li>
-                    <a href="#">Vegetables</a>
-                  </li>
-                  <li>
-                    <a href="#">Fruit & Nut Gifts</a>
-                  </li>
-                  <li>
-                    <a href="#">Fresh Berries</a>
-                  </li>
-                  <li>
-                    <a href="#">Ocean Foods</a>
-                  </li>
-                  <li>
-                    <a href="#">Butter & Eggs</a>
-                  </li>
-                  <li>
-                    <a href="#">Fastfood</a>
-                  </li>
-                  <li>
-                    <a href="#">Fresh Onion</a>
-                  </li>
-                  <li>
-                    <a href="#">Papayaya & Crisps</a>
-                  </li>
-                  <li>
-                    <a href="#">Oatmeal</a>
-                  </li>
-                  <li>
-                    <a href="#">Fresh Bananas</a>
-                  </li>
+                  {products.map((product, index) => (
+                    <li key={index}>
+                      <Link to="/shopgrid">{product}</Link>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -84,12 +70,7 @@ const Hero = () => {
               </div>
               <div className="hero__item set-bg" data-setbg={banner}>
                 <div className="hero__text">
-                  <span>FRUIT FRESH</span>
-                  <h2>
-                    Vegetable <br />
-                    100% Organic
-                  </h2>
-                  <p>Free Pickup and Delivery Available</p>
+                 
                   <a href="#" className="primary-btn">
                     SHOP NOW
                   </a>

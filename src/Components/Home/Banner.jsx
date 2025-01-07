@@ -1,11 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import Banner1 from "../img/banner/banner-1.jpg";
+import Banner1 from "../img/banner/banner-1.webp";
 import Banner2 from "../img/banner/banner-2.jpg";
 
 const Banner = () => {
- 
-
   return (
     <div class="banner">
       <div class="container">
